@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Nanum+Gothic&family=Raleway&display=swap');
+
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing :border-box;
+}
+/* 
+header {
+    
+} */
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 3em;
+}
+
+.welcome {
+    font-family: "Raleway";
+    font-size: 20px;
+}
+
+.logo__container h2 {
+    font-family: "Big Shoulders Display";
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.logo__container {
+    display: flex;
+    align-items: center;
+}
+
+.profile__container {
+    display: flex;
+    gap: 20px;
+}
+
+.profile__container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.sign__out-btn {
+    width: 100px;
+    border-color: transparent;
+    border-radius: 20px;
+    font-family: "Raleway";
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(182, 182, 75);
+    background-color: #e0dfe7;
+}
+
+.sign__out-btn:hover {
+    color : rgb(208, 208, 14);
+    background-color: rgb(77, 77, 126);
+}
+
+
+/* Mobile */
+@media all and (max-width: 540px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 1em;
+        position: relative;   
+    }
+
+    .sign__out-btn {
+        font-size: 15px;
+    }
+
+
+    .profile__container img {
+        display: none;
+    }
+
+    .welcome {
+     position: absolute;
+     top: 60px;
+     margin: auto;
+     font-size: 15px;
+    }
+
+    .logo__container {
+        position: absolute;
+    }
+
+    .logo__container h2 {
+        font-size: 30px;
+    }
+ }
+
+
+ @media all and (max-width: 540px) {
+
+ }
