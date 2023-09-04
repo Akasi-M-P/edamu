@@ -21,18 +21,26 @@ nav {
 
 .welcome {
     font-family: "Raleway";
-    font-size: 20px;
+    font-size: 25px;
+    color: rgb(62, 88, 115);;
 }
 
 .logo__container h2 {
     font-family: "Big Shoulders Display";
     font-size: 50px;
     font-weight: 700;
+    color: rgb(62, 88, 115);;
 }
 
 .logo__container {
     display: flex;
     align-items: center;
+}
+
+.title__money p {
+    color: rgb(62, 88, 115);
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .profile__container {
@@ -45,6 +53,7 @@ nav {
     height: 50px;
     border-radius: 25px;
 }
+
 
 .sign__out-btn {
     width: 100px;
@@ -154,6 +163,8 @@ section {
     height: 50px;
 }
 
+
+
 .title__money p {
     font-family: "Raleway";
 }
@@ -195,11 +206,28 @@ section {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    border: 1px solid rgb(232, 232, 232);
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    cursor: pointer;
 }
 }
 
+
+@media all and (min-width: 768px) and (max-width: 1180px) {
+     section {
+    width: 100%;
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 10px;
+}
+
+.box {
+    width: 90% ;
+    margin: 10px auto;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+ }
 
