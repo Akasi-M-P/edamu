@@ -11,25 +11,27 @@
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0;
+    gap: 10px;
     padding: 40px;
 }
 
 .customer__transactions {
-    width: 40%;
-    height: 500px;
+    width: 45%;
+    height: 650px;
     grid-row: 2 / span 3;
     background-color: #fff;
-    border-radius: 10px;
-    border: 1px solid black;
-    overflow: scroll;
+    border-radius: 5px;
+    border-color: transparent;
+    overflow: hidden;
     margin: auto;
+    padding: 4px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .activity__box {
     width: 100%;
     margin: auto;
-    padding: 10px;
+    /* padding: 10px; */
     display: flex;
     gap: 5px;
     justify-content: space-between;
@@ -38,16 +40,14 @@
     /* background-color: rgb(62, 88, 115); */
     border-color: transparent;
     /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+    position: relative;
 }
 
 .activity__box img {
-    width: 50%;
-    height: 150px;
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 80px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    width: 100%;
+    height: 200px;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 .activity__box button {
@@ -57,10 +57,21 @@
     font-size: 18px;
     color: rgb(62, 88, 115);
     font-weight: 700;
-    border-color: transparent;
-    /* border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px; */
-    border-radius: 10px;
+    border-color: rgb(62, 88, 115);;
+    border-radius: 30px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    transition-property: background-color; /* Property to transition */
+    transition-duration: 0.3s; /* Duration of the transition */
+    transition-timing-function: ease-in-out; /* Timing function */
+}
+
+.activity__box button:hover {
+    color: white;
+    background-color: rgb(62, 88, 115);
+    border: 4px solid white;
 }
 
 .transfer__money {
@@ -81,49 +92,75 @@
 
 
 /* TRANSACTIONS */
-.movements {
-  grid-row: 2 / span 3;
-  background-color: #fff;
-  border-radius: 1rem;
-  overflow: scroll;
+.scroll__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "Nanum Gothic";
+    overflow: scroll;
 }
 
-.movements__row {
-  padding: 2.25rem 4rem;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #eee;
+.transaction__row {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(62, 88, 115);
+    padding: 4px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.movements__type {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: #fff;
-  padding: 0.1rem 1rem;
-  border-radius: 10rem;
-  margin-right: 2rem;
+
+.transaction__type {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #fff;
+    padding: 0.1rem 1rem;
+    border-radius: 1px;
 }
 
-.movements__date {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: #666;
+
+.transaction__amount {
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    
 }
 
-.movements__type--deposit {
-  background-image: linear-gradient(to top left, #39b385, #9be15d);
+.transaction__deposit {
+    background-image: linear-gradient(to top left, #39b385, #9be15d);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.movements__type--withdrawal {
-  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+.transaction__withdrawal {
+    background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.movements__value {
-  font-size: 1.7rem;
-  margin-left: auto;
+.transaction__date {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #fff;
 }
+
+
+/* Partners */
+.partners {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+
+.partners img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
 
 
 /* Mobile */
@@ -133,7 +170,7 @@
     }
 
     .customer__activities {
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -151,4 +188,28 @@
     overflow: scroll;
     margin: auto;
 }
+
+.partners {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    justify-content: space-around;
 }
+
+.partner {
+    margin: auto;
+}
+
+.partners img{
+    width: 150px;
+    margin: auto;
+}
+
+}
+
+
+
+
+
+
+
